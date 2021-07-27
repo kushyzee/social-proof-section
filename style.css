@@ -164,7 +164,7 @@ footer {
    .intro {
       grid-area: intro;
       text-align: left;
-      padding-right: 11rem;
+      padding-right: 9rem;
       margin: 0 0 1rem;
    }
    
@@ -200,7 +200,7 @@ footer {
    }
    
    .ratings {
-      padding: 1.8rem 4rem;
+      padding: 2rem 4rem;
       display: flex;
       justify-content: flex-start;
       align-items: center;
