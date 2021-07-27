@@ -1,0 +1,258 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+   background-image: url('bg-pattern-top-mobile'), url('bg-pattern-bottom-mobile');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+body {
+   font-size: 1.5rem;
+   font-weight: 500;
+   padding: 6rem 3rem 0;
+   font-family: 'spartan', Sans-Serif;
+}
+
+h1 {
+   color: rgb(80,32,80);
+   font-size: 3.4rem;
+   margin-bottom: 2rem;
+   font-weight: 700;
+   line-height: 1;
+   letter-spacing: 0;
+}
+
+.intro {
+   text-align: center;
+}
+
+.intro>p {
+   color: rgb(147,123,146);
+   line-height: 1.4;
+   margin-bottom: 4rem;
+   font-weight: 500;
+}
+
+.ratings-group {
+   margin-bottom: 4rem;
+}
+
+.ratings {
+   background: rgb(247,242,247);
+   padding: 1.5rem 0;
+   text-align: center;
+   margin-top: 1.5rem;
+   border-radius: 1rem;
+}
+
+.stars {
+   margin-bottom: 1rem;
+}
+
+.stars>img {
+   width: 1.8rem;
+   margin-right: 0.3rem;
+}
+
+.ratings>p {
+   color: rgb(80,32,80);
+   font-weight: 700;
+}
+
+.review-group {
+   line-height: 1.6;
+}
+
+.review {
+   padding: 4rem 2.5rem 3rem;
+   background: rgb(80,32,80);
+   color: rgb(255,255,255);
+   border-radius: 1rem;
+   margin-bottom: 2rem;
+}
+
+.profile {
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: start;
+   justify-content: start;
+   margin-bottom: 2rem;
+   grid-gap: 1rem 2rem;
+}
+
+.profile>img {
+   border-radius: 50%;
+   width: 4rem;
+   margin: 0;
+}
+
+.profile>div {
+   display: inline-block;
+   margin: 0;
+   text-align: left;
+   align-self: center;
+}
+
+.profile>div>p:nth-child(2) {
+   color: rgb(238,104,164);
+   font-weight: 400;
+}
+
+.profile>div>p:nth-child(1) {
+   font-weight: 700;
+}
+
+blockquote {
+   font-weight: 400;
+}
+
+footer {
+   margin: 6rem 0 3rem;
+}
+
+.attribution {
+        font-size: 11px;
+        text-align: center;
+}
+      
+.attribution a {
+        color: hsl(228, 45%, 44%);
+}
+
+
+
+/* ======== MEDIA QUERIES ========= */
+
+@media (min-width:75em) {
+   html {
+   background-image: url('bg-pattern-top-desktop'), url('bg-pattern-bottom-desktop');
+   background-size: cover, cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   }
+
+    
+   body {
+   padding: 25vh 8rem;
+   }
+   
+   h1 {
+   font-size: 4.5rem;
+   margin-bottom: 1.4rem;
+   line-height: 1.2;
+   letter-spacing: 0;
+   padding-right: 5rem;
+   }
+   
+   .grid-container {
+      display: grid;
+      grid-auto-columns: 1fr 1fr;
+      grid-gap: 2rem 2rem;
+      grid-template-areas:
+      'intro intro ratings ratings'
+      'review review review review';
+      align-items: start;
+      align-content: start;
+   }
+   
+   .intro {
+      grid-area: intro;
+      text-align: left;
+      padding-right: 13rem;
+      margin: 0 0 1rem;
+   }
+   
+   .intro>p {
+      line-height: 1.5;
+      margin-bottom: 0;
+   }
+   
+   .ratings-group {
+      grid-area: ratings;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+   }
+
+   .review-group {
+      grid-area: review;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 4rem 0;
+      margin: 0;
+   }
+
+   .review {
+   padding: 4rem 2rem;
+   margin-right: 2.5rem;
+   }
+   
+   .review-group>div:nth-child(3) {
+      margin-right: 0;
+   }
+   
+   .ratings {
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+   }
+   
+   .ratings:nth-of-type(1) {
+      align-self: flex-start;
+   }
+   
+   .ratings:nth-of-type(2) {
+      align-self: center;
+   }
+   
+   .ratings:nth-of-type(3) {
+      align-self: flex-end;
+   }
+   
+   .stars {
+   margin: 0 1rem 0 0;
+   }
+   
+   .ratings>p {
+      margin: 0;
+   }
+   
+   .review:nth-of-type(1) {
+      align-self: flex-start;
+   }
+   
+   .review:nth-of-type(2) {
+      margin-top: 1.5rem;
+   }
+   
+   .review:nth-of-type(3) {
+      margin-top: 3rem;
+   }
+   
+   /* footer {
+      display: none;
+   } */
+
+}
+
+@media (min-width:90em) {
+   body {
+      padding: 18vh 0;
+      max-width: 77em;
+      margin: 0 auto;
+   }
+   
+   .grid-container {
+      margin: auto;
+   }
+
+}
